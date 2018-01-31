@@ -1,0 +1,33 @@
+' Gambas class file
+
+
+Public Sub Timer1_Timer()
+  Dim hFile As File
+  Dim sLine As String
+  Dim localFileSize As Integer
+  Dim downloadedFileSize As Integer
+  Dim percentage As Integer
+  
+  If Exist("/tmp/dfs") And Exist("/tmp/lfs") Then        
+    hFile = Open "/tmp/dfs" For Input
+    Line Input #hFile, sLine
+    Try downloadedFileSize = sLine
+    hFile = Open "/tmp/lfs" For Input
+    Line Input #hFile, sLine
+    Try localFileSize = sLine
+    
+    If Error Then
+      Print "Only a litle error!"
+    Else      
+      If localFileSize < downloadedFileSize Then
+        percentage = localFileSize / downloadedFileSize * 100
+        lbl_status.Text = "Downloading updates (" & percentage & "%)"
+      Else
+        lbl_status.Text = "Installing updates . . ."
+      Endif
+    Endif
+  Else
+    lbl_status.Text = "Starting . . ." 
+  Endif
+
+End

@@ -1,0 +1,31 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,38,9)
+  Background = &HFFFFFF&
+  Text = ("ZED Update")
+  Icon = Picture["icon:/small/save"]
+  TakeFocus = False
+  Stacking = Window.Above
+  { Label1 Label
+    MoveScaled(9,0,24,4)
+    Font = Font["Bold,Italic"]
+    Text = ("Please Wait . . .")
+  }
+  { lbl_status Label
+    MoveScaled(9,4,26,4)
+    Background = Color.Background
+    Text = ("Starting . . . ")
+    Alignment = Align.Center
+  }
+  { MovieBox1 MovieBox
+    MoveScaled(1,1.5714,12,10)
+    Path = "p.gif"
+    Playing = True
+  }
+  { Timer1 #Timer
+    #MoveScaled(30,1)
+    Enabled = True
+    Delay = 500
+  }
+}

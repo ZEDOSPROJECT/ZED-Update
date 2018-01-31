@@ -1,0 +1,27 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,64,42)
+  Background = Color.Background
+  Resizable = False
+  { WebView1 WebView
+    MoveScaled(1,5,62,32)
+    Background = &HDFDFDF&
+    Url = "http://sispicserver.esy.es/UPDATES/zed/BETA2"
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(1,1,58,4)
+    Text = ("A new Update for ZED OS is now avaliable")
+  }
+  { Button1 Button
+    MoveScaled(42,38,21,3)
+    Text = ("Install")
+  }
+  { Button2 Button
+    MoveScaled(1,38,21,3)
+    Text = ("Wait for next Boot")
+  }
+  { checker #Timer
+    #MoveScaled(41,6)
+  }
+}
