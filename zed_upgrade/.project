@@ -1,8 +1,8 @@
 # Gambas Project File 3.0
-# Compiled with Gambas 3.8.4
+# Compiled with Gambas 3.10.0
 Title=ZED Upgrade
 Startup=FMain
-Version=0.0.21
+Version=0.0.22
 Component=gb.image
 Component=gb.gui.qt
 Component=gb.form

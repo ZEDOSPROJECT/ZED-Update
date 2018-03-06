@@ -5,13 +5,13 @@ Count=0
 Count=0
 
 [Executable]
-Path="/home/alexandre/git/ZEDOS_2017/BETA2_root/etc/zed_updater/ui.gambas"
+Path="/home/alexandre/git/ZED-ROOT-OS/etc/zed_updater/ui.gambas"
 
 [OpenFile]
-Active=3
+Active=2
 File[1]=".src/FMain.form"
 Count=4
-File[2]=".src/FMain.class:2.12"
+File[2]=".src/FMain.class:3.15"
 File[3]=".src/frm_install.form"
 File[4]=".src/frm_install.class:13.12"
 
