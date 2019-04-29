@@ -21,7 +21,7 @@ Public Sub Button1_Click()
   ActualVersion = File.Load("/etc/zed_updater/version")
   checker.Enabled = True
   If System.User.Name <> "root" Then
-    Exec ["gksu", "'/etc/zed_updater/di.sh'", "-m 'Insert your password to install updates'"]
+    Exec ["pkexec", "/etc/zed_updater/di.sh"]
   Else
     Exec ["/etc/zed_updater/di.sh"]
   Endif
